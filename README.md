@@ -31,4 +31,4 @@ edges = (0, 1), (0, 2), (0, 3), (2, 3), (2, 4), (3, 4), (1, 3)
 ````
 
 The resulting colored graph would be as follows:
-[image](GraphColoringExample.png)
+![image](GraphColoringExample.png)
