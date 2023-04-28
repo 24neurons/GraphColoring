@@ -24,3 +24,11 @@ first_node second_node
 ````
 representing there is an edge between these two nodes. The nodes are indexed from 0 to n-1 with $n$ being the number of the nodes. If the number of nodes are less then 30, after showing you the solution, the script will ask you whether you want to see the visualization of the solution on the graph. If you choose ```1```, then a window will be prompted up to show the solution with colors to represent it.
 ## Example
+
+````
+number of nodes = 5
+edges = (0, 1), (0, 2), (0, 3), (2, 3), (2, 4), (3, 4), (1, 3)
+````
+
+The resulting colored graph would be as follows:
+[image](GraphColoringExample.png)
