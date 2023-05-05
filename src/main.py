@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 # Create the integer solver with the SCIP backend
 # This is the solver that will be used to solve the problem
 solver = pywraplp.Solver.CreateSolver('SCIP')
+import time
 
 num_nodes = 0
 num_colors = 0
@@ -56,7 +57,7 @@ def run():
             
     # 3. Objective function
     solver.Minimize(solver.Sum([C[color] for color in range(num_colors)]))
-
+    start = time.time()
     status = solver.Solve()
 
     if status == pywraplp.Solver.OPTIMAL or status == pywraplp.Solver.FEASIBLE:
@@ -70,6 +71,10 @@ def run():
 
     else:
         print('No solution found.')
+    
+    end = time.time()
+
+    print(f"Time to solve: {end - start} seconds")
     graph_display(NODE_COLOR, E)
 def graph_display(NODE_COLOR, E):
     num_nodes = len(NODE_COLOR)
