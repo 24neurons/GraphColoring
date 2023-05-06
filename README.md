@@ -1,4 +1,4 @@
-# Graph Coloring Linear Solver
+# **Graph Coloring Linear Solver**
 
 ## Introduction
 
